@@ -91,7 +91,7 @@ class Agent:
     def train_short_memory(self,state,action,reward,next_state,done):
         self.trainer.train_step(state,action,reward,next_state,done)
 
-    # TODO: What is the role of epsilon in this method? Feel free to reference the OpenAI Gym RL tutorial from 02/09/22
+    
     # The role of epsilon is for the agent to decide if it should make a random action or if should look at previous learned states
     # and make a decision based on the Q-table. 
 
@@ -109,7 +109,7 @@ class Agent:
             final_move[move]=1 
         return final_move
 
-# TODO: Write a couple sentences describing the training process coded below.
+
 # The training process coded below is similar to the training process in the OpenAI Gym RL tutorial.
 # We are using scores as our reward. The record is the highest score achieved. The agent is trained to maximize the score.
 # game = SnakeGameAI() is the game environment.
@@ -173,7 +173,7 @@ def train():
 if(__name__=="__main__"):
     train()
 
-# TODO: Write a brief paragraph on your thoughts about this implementation. 
+
 # Was there anything surprising, interesting, confusing, or clever? Does the code smell at all?
 # The code was pretty simple. The agent was trained to maximize the score. 
 # I enjoy how we have both a short term and long term memory, and how the short term memroy is used to influence the long term memeroy of the machine learning model .
